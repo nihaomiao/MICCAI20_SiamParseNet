@@ -19,14 +19,17 @@ from SPN.SPNet import SPNet
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 # setting x_m (src_img_batch) and x_n (tar_img_batch)
+# size is (batch, channel, height, width)
 src_img_batch = torch.rand((2, 3, 256, 256)).cuda()
 tar_img_batch = torch.rand((2, 3, 256, 256)).cuda()
 
 # setting y_m (src_lbl_batch) and y_n (tar_lbl_batch)
+# size is (batch, height, width)
 src_lbl_batch = torch.randint(high=5, size=(2, 256, 256)).cuda().to(dtype=torch.float32)
 tar_lbl_batch = torch.randint(high=5, size=(2, 256, 256)).cuda().to(dtype=torch.float32)
 
 # change to one-hot representation
+# size is (batch, channel, height, width)
 src_lbl_batch_resize = vl2ch(src_lbl_batch).cuda()
 tar_lbl_batch_resize = vl2ch(tar_lbl_batch).cuda()
 
