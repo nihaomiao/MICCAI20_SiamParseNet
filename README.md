@@ -8,6 +8,43 @@ The code implementation of our MICCAI20 paper [SiamParseNet: Joint Body Parsing 
 
 <div align=center><img src="SPN.png" width="585px" height="352px"/></div>
 
+Quick Start
+----
+```python
+import os
+import torch
+from SPN.SPNet import SPNet
+
+# setting GPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+# setting x_m (src_img_batch) and x_n (tar_img_batch)
+src_img_batch = torch.rand((2, 3, 256, 256)).cuda()
+tar_img_batch = torch.rand((2, 3, 256, 256)).cuda()
+
+# setting y_m (src_lbl_batch) and y_n (tar_lbl_batch)
+src_lbl_batch = torch.randint(high=5, size=(2, 256, 256)).cuda().to(dtype=torch.float32)
+tar_lbl_batch = torch.randint(high=5, size=(2, 256, 256)).cuda().to(dtype=torch.float32)
+
+# change to one-hot representation
+src_lbl_batch_resize = vl2ch(src_lbl_batch).cuda()
+tar_lbl_batch_resize = vl2ch(tar_lbl_batch).cuda()
+
+# using fully-supervised SPN for training
+model = SPNet()
+model = model.cuda()
+model.eval()
+
+# One forward during training
+src_img_seg_lbl, tar_img_seg_lbl, src_img_mat_lbl, tar_img_mat_lbl = model(src_img_batch,
+                                                                           tar_img_batch,
+                                                                           src_lbl_batch_resize,
+                                                                           tar_lbl_batch_resize)
+print(src_img_seg_lbl.size(), tar_img_seg_lbl.size(),
+      src_img_mat_lbl.size(), tar_img_mat_lbl.size())
+
+```
+
 DONE
 ----
 The network structure of SiamParsetNet
