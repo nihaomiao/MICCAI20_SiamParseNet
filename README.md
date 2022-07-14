@@ -37,7 +37,7 @@ tar_lbl_batch_resize = vl2ch(tar_lbl_batch).cuda()
 # using fully-supervised SPN for training
 model = SPNet()
 model = model.cuda()
-model.eval()
+model.train()
 
 # One forward during training
 # outputs are segmentation maps from segmentation branch (*_img_seg_lbl) and propagation branch (*_img_mat_lbl)
