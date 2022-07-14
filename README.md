@@ -14,6 +14,7 @@ Quick Start
 import os
 import torch
 from SPN.SPNet import SPNet
+from PropUtils.misc import vl2ch
 
 # setting GPU
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
