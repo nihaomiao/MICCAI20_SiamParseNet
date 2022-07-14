@@ -40,6 +40,7 @@ model = model.cuda()
 model.eval()
 
 # One forward during training
+# outputs are segmentation maps from segmentation branch (*_img_seg_lbl) and propagation branch (*_img_mat_lbl)
 src_img_seg_lbl, tar_img_seg_lbl, src_img_mat_lbl, tar_img_mat_lbl = model(src_img_batch,
                                                                            tar_img_batch,
                                                                            src_lbl_batch_resize,
