@@ -8,6 +8,10 @@ The code implementation of our MICCAI20 paper [SiamParseNet: Joint Body Parsing 
 
 <div align=center><img src="SPN.png" width="585px" height="352px"/></div>
 
+Dependencies
+----
+Python 3.7.10, Pytorch 1.10.2, etc.
+
 Quick Start
 ----
 ```python
