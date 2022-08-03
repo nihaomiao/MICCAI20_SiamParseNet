@@ -4,8 +4,6 @@ SiamParseNet
 The code implementation of our MICCAI20 paper [SiamParseNet: Joint Body Parsing and Label Propagation in Infant Movement Videos
 ](https://arxiv.org/abs/2007.08646). 
 
-(This reprository is still under construction.)
-
 <div align=center><img src="SPN.png" width="585px" height="352px"/></div>
 
 Dependencies
