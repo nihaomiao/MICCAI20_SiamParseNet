@@ -10,7 +10,7 @@ Dependencies
 ----
 Python 3.7.10, Pytorch 1.10.2, etc.
 
-Quick Start 1
+Quick Start
 ----
 Here we use a simple example to show how to train our model in full-supervised way.
 ```python
@@ -114,8 +114,6 @@ loss.backward()
 optimizer.step()
 ```
 
-Quick Start 2
-----
 Our model can also be trained in a semi-supervised way. `tr_type` is set to 0, 1, 2 for unsupervised, semi-supervised, and fully-supervised cases, respectively.
 
 ```python
