@@ -6,6 +6,10 @@ The code implementation of our MICCAI20 paper [SiamParseNet: Joint Body Parsing 
 
 <div align=center><img src="SPN.png" width="585px" height="352px"/></div>
 
+Example videos:
+
+https://user-images.githubusercontent.com/39548279/185499667-1ff0c966-0a6a-4fc4-9536-6814c13aee68.mp4
+
 Dependencies
 ----
 Python 3.7.10, Pytorch 1.10.2, etc.
