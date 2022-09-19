@@ -261,7 +261,7 @@ If you find our approaches useful in your research, please consider citing:
   organization={Springer}
 }
 ```
-For any problems with the code, please feel free to contact me: homerhm.ni@gmail.com
+For any problems with the code, please feel free to open an issue or contact me: homerhm.ni@gmail.com
 
 Acknowledgement
 ----
