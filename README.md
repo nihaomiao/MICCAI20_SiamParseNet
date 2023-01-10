@@ -4,7 +4,7 @@ SiamParseNet
 The code implementation of our MICCAI20 paper [SiamParseNet: Joint Body Parsing and Label Propagation in Infant Movement Videos
 ](https://arxiv.org/abs/2007.08646). 
 
-You may also interested in our follow-up work [Semi-supervised Body Parsing and Pose Estimation for Enhancing Infant General Movement Assessment](https://arxiv.org/abs/2210.08054), which applied SiamParseNet to the real clinical settings and is publised on Medical Image Analysis 2023.
+You may be also interested in our follow-up work [Semi-supervised Body Parsing and Pose Estimation for Enhancing Infant General Movement Assessment](https://arxiv.org/abs/2210.08054), which applied SiamParseNet to the real clinical settings and is publised on Medical Image Analysis 2023.
 
 <div align=center><img src="SPN.png" width="585px" height="352px"/></div>
 
