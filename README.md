@@ -246,9 +246,11 @@ DONE
 ----
 The network structure of SiamParsetNet
 
+The AAT training
+
 TODO
 ----
-The AAT training and MSI testing codes
+MSI testing codes
 
 Citing SiamParseNet
 ----
