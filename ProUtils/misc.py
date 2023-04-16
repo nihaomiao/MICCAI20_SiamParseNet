@@ -73,6 +73,19 @@ def dist_loss_calc(pred, label, class_weight=None, alpha=1e-6):  # original:alph
     return loss*alpha
 
 
+class Logger(object):
+    def __init__(self, filename='default.log', stream=sys.stdout):
+        self.terminal = stream
+        self.log = open(filename, 'w')
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def flush(self):
+        pass
+
+
 if __name__ == '__main__':
     label_batch1_resize = torch.randint(high=5, size=(4, 1, 256, 256)).cuda().to(dtype=torch.float32)
     vl2ch(label_batch1_resize)
